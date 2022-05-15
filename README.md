@@ -16,6 +16,8 @@
 
 联系我：ycdtbs@163.com 
 
+Github: https://github.com/ycdtbs/massive_faceSearch/tree/main
+
 ##### 在线环境说明
 
 在线环境会收集大家数据，请勿上传敏感照片，项目测试数据集均来源于网络公开照片，利用Python脚本爬取，脚本存放于目录中
