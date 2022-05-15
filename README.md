@@ -1,0 +1,2 @@
+# massive_faceSearch
+Springboot基于Milvus向量搜索引擎的大规模人脸搜索服务
