@@ -1,0 +1,68 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://ip:port/face?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+    serialization:
+      write-dates-as-timestamps: false
+  servlet:
+    multipart:
+      max-request-size: 2000MB
+      max-file-size: 1000MB
+  redis:
+    host:  
+    port:  
+    password:  
+    jedis:
+      pool:
+        max-active: 8
+        max-wait: 6000
+        max-idle: 5
+        min-idle: 1
+  activemq:
+    broker-url:    #你activeMQ的ip和端口号
+    user:     #activeMq账号
+    password:   #activeMq密码
+    pool:
+      enabled: true       #连接池启动
+      max-connections: 10 #最大连接数
+
+
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    auto-mapping-behavior: full
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  global-config:
+    # 逻辑删除配置
+    db-config:
+      # 删除前
+      logic-not-delete-value: 1
+      # 删除后
+      logic-delete-value: 0
+oos:
+  endpoint:  
+  keyid:   # 填写刚刚生成的AccessKey
+  keysecret:    # 填写刚刚生成的Accesssecret
+  bucketname:   # bucket名称
+  filehost:      #bucket下文件夹的路径
+uploadFile:
+  templocation: D:\temp
+
+milvus:
+  host: 
+  port:  
+  collection:  
+  partition:  
+
